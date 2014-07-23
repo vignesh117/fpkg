@@ -21,12 +21,18 @@ class LinearRegression(object):
         self.trainX = featureset
         self.trainY = y
         self.testX = testX
-        #self.select_features()
-
-        self.train_selected = self.trainX
-        self.test_selected  = self.testX
+        #self.select_features(
         self.fixmv = fixmv
-        self.build_regression_model()
+
+
+
+    def set_train_selected(self,train_selected):
+        self.train_selected = train_selected
+
+
+    def set_test_selected(self, test_selected):
+        self.test_selected = test_selected
+
 
     def select_features(self, num_features = None):
         """
